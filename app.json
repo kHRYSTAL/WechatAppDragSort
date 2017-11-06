@@ -1,8 +1,6 @@
 {
   "pages":[
     "pages/list/list",
-    "pages/add/add",
-    "pages/edit/edit"
   ],
   "window":{
     "backgroundTextStyle":"light",
