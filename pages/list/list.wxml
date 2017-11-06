@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container" id='container'>
+  <import src="/templates/dragsort/dragsort.wxml" />
+  <template is="dragsort" data="{{itemTemplateName,curPositionIndex,curDragIndex,content,start,itemHeight}}"></template>
+</view>

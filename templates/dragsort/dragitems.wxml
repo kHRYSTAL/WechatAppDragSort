@@ -1,0 +1,11 @@
+<template name="simpleItem">
+  <view class="simpleItem">
+    <view class='itemTitle'>
+      {{title}}
+    </view>
+    <view class='itemContent'>
+      {{desc}}
+    </view>
+    <view class='divider' />
+  </view>
+</template>

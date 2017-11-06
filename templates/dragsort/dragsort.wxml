@@ -1,0 +1,24 @@
+<template name="dragsort">
+  <view bindtap="box" class="box">
+    <view wx:for="{{content}}" id='sort-{{index}}' class="main" style="{{'height:'+ itemHeight + 'px'}}">
+      <view class="item {{curPositionIndex == index? 'hide':'show'}}" bindtap='onDragItemClick' data-index="{{index}}">
+        <import src="/templates/dragsort/dragitems.wxml" />
+        <template is="{{itemTemplateName}}" data="{{...(((index < curPositionIndex && index < curDragIndex)||(index > curPositionIndex && index > curDragIndex) || !(curPositionIndex >=0 && curDragIndex>=0)) ?  content[index] : (curPositionIndex > curDragIndex ? content[index + 1]: content[index - 1]))}}"></template>
+        <view class="itemRight {{curPositionIndex == index? 'hide':'show'}}" data-index="{{index}}" catchtouchmove="move" catchtouchstart="movestart" catchtouchend="moveend">
+          <image class="rightIcon" src='/templates/dragsort/miniprogram_img_drag.png'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="itemMask {{curPositionIndex <0 || curDragIndex<0? 'hide':'show'}}" style="{{'height:'+ itemHeight + 'px;top:' + start.y+'px'}}">
+      <view class="item">
+        <import src="/templates/dragsort/dragitems.wxml" />
+        <template is="{{itemTemplateName}}" data="{{...content[curDragIndex]}}"></template>
+        <view class="itemRight" catchtouchmove="move" catchtouchstart="movestart" catchtouchend="moveend">
+          <image class="rightIcon" src='/templates/dragsort/miniprogram_img_drag.png'></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</template>
