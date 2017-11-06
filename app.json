@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/list/list",
+    "pages/list/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
