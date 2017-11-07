@@ -1,4 +1,3 @@
-
 const dragsort = require("../../templates/dragsort/dragsort.js");
 var extend = require('../../lib/extend.js');
 
