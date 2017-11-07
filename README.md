@@ -1,1 +1,1 @@
-![](https: //ws2.sinaimg.cn/large/006tKfTcly1fl9sixtky6g30a50i974s.gif)
+![](https://ws2.sinaimg.cn/large/006tKfTcly1fl9sixtky6g30a50i974s.gif)
